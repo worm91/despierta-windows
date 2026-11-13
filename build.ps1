@@ -38,7 +38,7 @@ if (Test-Path $psInstaller) {
     $content = Get-Content -Path $psInstaller -Raw -Encoding UTF8
     $pattern = '(?s)\$b64\s*=\s*"[^"]*"'
     $newContent = [regex]::Replace($content, $pattern, "`$b64 = `"$b64`"")
-    [System.IO.File]::WriteAllText($psInstaller, $newContent, [System.Text.Encoding]::UTF8)
+    [System.IO.File]::WriteAllText($psInstaller, $newContent, [System.Text.UTF8Encoding]::new($false))
     Write-Host "  -> instalar_despierta.ps1 actualizado" -ForegroundColor Green
 }
 
@@ -46,11 +46,11 @@ if (Test-Path $srcInstaller) {
     $content = Get-Content -Path $srcInstaller -Raw -Encoding UTF8
     $pattern = '(?s)const\s+string\s+APP_PAYLOAD_B64\s*=\s*"[^"]*";'
     $newContent = [regex]::Replace($content, $pattern, "const string APP_PAYLOAD_B64 = `"$b64`";")
-    [System.IO.File]::WriteAllText($srcInstaller, $newContent, [System.Text.Encoding]::UTF8)
+    [System.IO.File]::WriteAllText($srcInstaller, $newContent, [System.Text.UTF8Encoding]::new($false))
     Write-Host "  -> src/Installer.cs actualizado" -ForegroundColor Green
 }
 
-# 3. Compilar instalador grafico autónomo
+# 3. Compilar instalador grafico autÃ³nomo
 Write-Host "[3/3] Compilando instalador autonomo $srcInstaller ..." -ForegroundColor Cyan
 & $csc /target:winexe /out:"$binInstaller" /platform:anycpu /optimize+ "$srcInstaller"
 if ($LASTEXITCODE -ne 0) { throw "Fallo la compilacion de Instalador-Despierta.exe" }

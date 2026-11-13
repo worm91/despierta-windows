@@ -1,11 +1,10 @@
-<#
-  Desinstalador de Modo Despierta (Windows Keep-Awake)
-  Uso: irm <URL>/desinstalar_despierta.ps1 | iex
-#>
+# Desinstalador de Modo Despierta (Windows Keep-Awake)
+# Uso: irm https://raw.githubusercontent.com/worm91/despierta-windows/main/desinstalar_despierta.ps1 | iex
+
 $ErrorActionPreference = "SilentlyContinue"
 
 Write-Host "==========================================================" -ForegroundColor Cyan
-Write-Host "   Desinstalando Modo Despierta ☕                        " -ForegroundColor Yellow
+Write-Host "   Desinstalando Modo Despierta â˜•                        " -ForegroundColor Yellow
 Write-Host "==========================================================" -ForegroundColor Cyan
 
 # 1. Terminar proceso si esta corriendo

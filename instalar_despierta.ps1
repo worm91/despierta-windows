@@ -1,7 +1,6 @@
-﻿<#
-  Instalador automatico de Modo Despierta (Windows Keep-Awake)
-  Uso: irm <URL>/instalar_despierta.ps1 | iex
-#>
+# Instalador automatico de Modo Despierta (Windows Keep-Awake)
+# Uso: irm https://raw.githubusercontent.com/worm91/despierta-windows/main/instalar_despierta.ps1 | iex
+
 $ErrorActionPreference = "Stop"
 
 Write-Host ""
