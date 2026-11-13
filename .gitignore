@@ -1,0 +1,15 @@
+# Build outputs
+*.obj
+*.pdb
+*.user
+*.suo
+
+# Temp files
+*.tmp
+*.log
+.vs/
+.vscode/
+
+# Binaries (optional: if you prefer building from source, keep bin/ ignored)
+# bin/
+
