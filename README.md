@@ -1,4 +1,4 @@
-# Modo Despierta (Windows Keep-Awake) ☕
+﻿# Modo Despierta (Windows Keep-Awake) ☕
 
 Microaplicación nativa y ultra ligera en C# para Windows que evita que la computadora se suspenda o apague la pantalla cuando estás ocupado o ejecutando tareas largas, utilizando la API oficial del kernel de Windows `SetThreadExecutionState`.
 
@@ -9,7 +9,7 @@ Microaplicación nativa y ultra ligera en C# para Windows que evita que la compu
 ### Opción 1: Instalador Gráfico Autónomo (`.exe`)
 Si prefieres un instalador clásico ejecutable con ventana visual:
 1. Descarga el ejecutable desde la carpeta `bin/` o GitHub Releases:
-   👉 **`bin/Instalador-Despierta.exe`** (54 KB)
+   👉 [**Descargar Instalador-Despierta.exe (v1.0)**](https://github.com/worm91/despierta-windows/releases/download/v1.0/Instalador-Despierta.exe)
 2. Haz doble clic y presiona **Instalar**.
 3. *Soporte silencioso para scripts:* `Instalador-Despierta.exe /silent` (o `/uninstall` para desinstalar).
 
